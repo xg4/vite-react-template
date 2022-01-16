@@ -5,7 +5,14 @@ import Layout from './layouts'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
-const About = lazy(() => import('./pages/About'))
+function LazyComponent(path: string) {
+  const Comp = lazy(() => import(/* @vite-ignore */ path))
+  return (
+    <Suspense fallback={<PageLoading />}>
+      <Comp />
+    </Suspense>
+  )
+}
 
 export const routes: RouteObject[] = [
   {
@@ -18,11 +25,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: 'about',
-        element: (
-          <Suspense fallback={<PageLoading />}>
-            <About />
-          </Suspense>
-        ),
+        element: LazyComponent('./pages/About'),
       },
     ],
   },
