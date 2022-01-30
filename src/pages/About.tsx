@@ -1,13 +1,13 @@
-import { map } from 'lodash'
-import React from 'react'
+import { map } from 'lodash';
+import React from 'react';
 
 function About() {
   console.log(
     map([1, 2, 3, 4], (i) => i * 2),
-    'lodash map'
-  )
+    'lodash map',
+  );
 
-  return <div>about</div>
+  return <div>about</div>;
 }
 
-export default About
+export default About;
