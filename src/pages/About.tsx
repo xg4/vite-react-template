@@ -1,5 +1,4 @@
 import { map } from 'lodash';
-import React from 'react';
 
 function About() {
   console.log(
