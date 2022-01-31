@@ -1,7 +1,7 @@
-import rollupReplace from '@rollup/plugin-replace'
-import react from '@vitejs/plugin-react'
-import dayjs from 'dayjs'
-import { defineConfig } from 'vite'
+import rollupReplace from '@rollup/plugin-replace';
+import react from '@vitejs/plugin-react';
+import dayjs from 'dayjs';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,4 +15,4 @@ export default defineConfig({
   resolve: {
     alias: { 'lodash/fp': 'lodash/fp', lodash: 'lodash-es' },
   },
-})
+});
