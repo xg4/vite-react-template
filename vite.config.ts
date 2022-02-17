@@ -20,7 +20,5 @@ export default defineConfig({
     __DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
   },
   plugins: [react(), rollupReplace({})],
-  resolve: {
-    alias: { 'lodash/fp': 'lodash/fp', lodash: 'lodash-es' },
-  },
+  resolve: {},
 });
