@@ -1,36 +1,27 @@
-import { lazy, Suspense } from 'react';
-import { RouteObject } from 'react-router-dom';
-import PageLoading from './components/PageLoading';
-import Layout from './layouts';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-
-function LazyComponent(path: string) {
-  const Comp = lazy(() => import(/* @vite-ignore */ path));
-  return (
-    <Suspense fallback={<PageLoading />}>
-      <Comp />
-    </Suspense>
-  );
-}
+import { RouteObject, useRoutes } from 'react-router-dom';
+import LazyComponent from './components/LazyComponent';
 
 export const routes: RouteObject[] = [
   {
-    element: <Layout />,
+    element: LazyComponent(() => import('./layouts/index')),
     path: '/',
     children: [
       {
         index: true,
-        element: <Home />,
+        element: LazyComponent(() => import('./pages/Home')),
       },
       {
         path: 'about',
-        element: LazyComponent('./pages/About'),
+        element: LazyComponent(() => import('./pages/About')),
       },
     ],
   },
   {
-    element: <NotFound />,
+    element: LazyComponent(() => import('./pages/NotFound')),
     path: '*',
   },
 ];
+
+export default function Routes() {
+  return useRoutes(routes);
+}
