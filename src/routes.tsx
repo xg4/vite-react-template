@@ -1,10 +1,10 @@
-import { RouteObject, useRoutes } from 'react-router-dom';
-import LazyComponent from './components/LazyComponent';
+import { RouteObject, useRoutes } from 'react-router-dom'
+import LazyComponent from './components/LazyComponent'
 
 export const routes: RouteObject[] = [
   {
-    element: LazyComponent(() => import('./layouts/index')),
     path: '/',
+    element: LazyComponent(() => import('./layouts/index')),
     children: [
       {
         index: true,
@@ -17,11 +17,11 @@ export const routes: RouteObject[] = [
     ],
   },
   {
-    element: LazyComponent(() => import('./pages/NotFound')),
     path: '*',
+    element: LazyComponent(() => import('./pages/NotFound')),
   },
-];
+]
 
 export default function Routes() {
-  return useRoutes(routes);
+  return useRoutes(routes)
 }
