@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['react-app', 'plugin:prettier/recommended'],
+  extends: ['plugin:prettier/recommended'],
   plugins: ['prettier'],
 }
