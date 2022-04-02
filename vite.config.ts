@@ -1,15 +1,15 @@
-import rollupReplace from '@rollup/plugin-replace';
-import react from '@vitejs/plugin-react';
-import { execSync } from 'child_process';
-import dayjs from 'dayjs';
-import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react'
+import { execSync } from 'child_process'
+import dayjs from 'dayjs'
+import { defineConfig } from 'vite'
+import eslintPlugin from 'vite-plugin-eslint'
 
 function getLatestCommitHash() {
   try {
-    const hash = execSync('git rev-parse --short HEAD');
-    return hash.toString().trim();
+    const hash = execSync('git rev-parse --short HEAD')
+    return hash.toString().trim()
   } catch {}
-  return 'unknown';
+  return 'unknown'
 }
 
 // https://vitejs.dev/config/
@@ -19,6 +19,6 @@ export default defineConfig({
     __ENV__: JSON.stringify(process.env.NODE_ENV),
     __DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
   },
-  plugins: [react(), rollupReplace({})],
+  plugins: [react(), eslintPlugin()],
   resolve: {},
-});
+})
