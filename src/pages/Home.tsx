@@ -10,7 +10,7 @@ function Home() {
   return (
     <div
       className={classNames(
-        'flex text-ellipsis text-left text-xs text-red-500'
+        'flex flex-col text-ellipsis text-left text-xs text-red-500'
       )}
     >
       home
