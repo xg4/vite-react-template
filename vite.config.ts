@@ -2,7 +2,6 @@ import react from '@vitejs/plugin-react'
 import { execSync } from 'child_process'
 import dayjs from 'dayjs'
 import { defineConfig } from 'vite'
-import eslintPlugin from 'vite-plugin-eslint'
 
 function getLatestCommitHash() {
   try {
@@ -19,6 +18,6 @@ export default defineConfig({
     __ENV__: JSON.stringify(process.env.NODE_ENV),
     __DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
   },
-  plugins: [react(), eslintPlugin()],
+  plugins: [react()],
   resolve: {},
 })
