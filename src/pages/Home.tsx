@@ -1,25 +1,22 @@
-import classNames from 'classnames'
-import { useEffect, useState } from 'react'
-
 function Home() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    console.log(isOpen)
-  }, [])
+  const keywords = [
+    'react',
+    'react-router v6',
+    'react-query',
+    'react-use',
+    'react-transition-group',
+    'lodash',
+    'dayjs',
+    'axios',
+    'tailwindcss',
+    'typescript',
+    'vite',
+  ]
   return (
-    <div
-      className={classNames(
-        'flex flex-col text-ellipsis text-left text-xs text-red-500'
-      )}
-    >
-      home
-      <br />
-      {__VERSION__}
-      <br />
-      {__DATE__}
-      <br />
-      {__ENV__}
+    <div className="text-center">
+      <h1>React Starter Template</h1>
+      <p className="text-sm">via Vite</p>
+      <p className="text-xs">{keywords.join(', ')}</p>
     </div>
   )
 }
