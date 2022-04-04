@@ -6,7 +6,7 @@ function Home() {
 
   useEffect(() => {
     console.log(isOpen)
-  })
+  }, [])
   return (
     <div
       className={classNames(
