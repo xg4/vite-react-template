@@ -1,24 +1,24 @@
 import { RouteObject, useRoutes } from 'react-router-dom'
-import LazyComponent from './components/LazyComponent'
+import LazyC from './components/LazyC'
 
 export const routes: RouteObject[] = [
   {
     path: '/',
-    element: LazyComponent(() => import('./layouts/index')),
+    element: LazyC(() => import('./layouts/index')),
     children: [
       {
         index: true,
-        element: LazyComponent(() => import('./pages/Home')),
+        element: LazyC(() => import('./pages/home')),
       },
       {
         path: 'about',
-        element: LazyComponent(() => import('./pages/About')),
+        element: LazyC(() => import('./pages/about')),
       },
     ],
   },
   {
     path: '*',
-    element: LazyComponent(() => import('./pages/NotFound')),
+    element: LazyC(() => import('./pages/notFound')),
   },
 ]
 

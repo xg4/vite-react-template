@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 
-export default function LazyComponent(
+// lazy component
+export default function LazyC(
   factory: () => Promise<{
     default: () => JSX.Element
   }>

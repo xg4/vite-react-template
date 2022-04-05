@@ -21,7 +21,7 @@ function Layout() {
         <Outlet />
 
         <div className="space-x-4 pt-4">
-          <span>Routes:</span>
+          <span className="font-bold">Routes:</span>
           {routes.map((item) => (
             <Link
               className="text-primary-500 underline"
@@ -33,7 +33,7 @@ function Layout() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto flex justify-between text-xs">
+      <div className="container mx-auto flex flex-wrap justify-between text-xs">
         <p>__VERSION__: {__VERSION__}</p>
         <p>__DATE__: {__DATE__}</p>
         <p>__ENV__:{__ENV__}</p>
