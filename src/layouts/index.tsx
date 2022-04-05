@@ -37,6 +37,7 @@ function Layout() {
       <div className="container mx-auto flex flex-wrap justify-between text-xs">
         <p>app version: {__APP_VERSION__}</p>
         <p>app env:{__APP_ENV__}</p>
+        <p>app branch:{__APP_BRANCH__}</p>
         <p>build date: {dayjs(__BUILD_DATE__).format('YYYY-MM-DD HH:mm:ss')}</p>
       </div>
     </main>
