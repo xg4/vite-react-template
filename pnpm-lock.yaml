@@ -19,7 +19,6 @@ specifiers:
   lint-staged: ^12.3.7
   lodash: ^4.17.21
   postcss: ^8.4.12
-  preact: ^10.7.1
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.8
   react: ^18.0.0
@@ -37,7 +36,6 @@ dependencies:
   classnames: 2.3.1
   dayjs: 1.11.0
   lodash: 4.17.21
-  preact: 10.7.1
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
   react-query: 3.34.19_react-dom@18.0.0+react@18.0.0
@@ -3870,10 +3868,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
     dev: true
-
-  /preact/10.7.1:
-    resolution: {integrity: sha512-MufnRFz39aIhs9AMFisonjzTud1PK1bY+jcJLo6m2T9Uh8AqjD77w11eAAawmjUogoGOnipECq7e/1RClIKsxg==}
-    dev: false
 
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
