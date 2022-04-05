@@ -6,13 +6,14 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   const alias = {}
-  if (!isDev) {
-    Object.assign(alias, {
-      react: 'preact/compat',
-      'react-dom/test-utils': 'preact/test-utils',
-      'react-dom': 'preact/compat',
-    })
-  }
+  // can't replace with preact, because it's not compatible with Suspense Components
+  // if (!isDev) {
+  //   Object.assign(alias, {
+  //     react: 'preact/compat',
+  //     'react-dom/test-utils': 'preact/test-utils',
+  //     'react-dom': 'preact/compat',
+  //   })
+  // }
   return {
     define: {
       __APP_VERSION__: JSON.stringify(getAppVersion()),

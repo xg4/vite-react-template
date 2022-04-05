@@ -1,27 +1,32 @@
+import { lazy, Suspense } from 'react'
 import { RouteObject, useRoutes } from 'react-router-dom'
-import LazyC from './components/LazyC'
+
+const BaseLayout = lazy(() => import('./layouts/index'))
+const Home = lazy(() => import('./pages/home'))
+const About = lazy(() => import('./pages/about'))
+const NotFound = lazy(() => import('./pages/notFound'))
 
 export const routes: RouteObject[] = [
   {
     path: '/',
-    element: LazyC(() => import('./layouts/index')),
+    element: <BaseLayout />,
     children: [
       {
         index: true,
-        element: LazyC(() => import('./pages/home')),
+        element: <Home />,
       },
       {
         path: 'about',
-        element: LazyC(() => import('./pages/about')),
+        element: <About />,
       },
     ],
   },
   {
     path: '*',
-    element: LazyC(() => import('./pages/notFound')),
+    element: <NotFound />,
   },
 ]
 
 export default function Routes() {
-  return useRoutes(routes)
+  return <Suspense fallback={null}>{useRoutes(routes)}</Suspense>
 }
