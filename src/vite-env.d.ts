@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
 
-declare const __DATE__: string;
-declare const __ENV__: string;
-declare const __VERSION__: string;
+declare const __BUILD_DATE__: string
+declare const __APP_ENV__: string
+declare const __APP_VERSION__: string

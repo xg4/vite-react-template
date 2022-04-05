@@ -34,9 +34,9 @@ function Layout() {
         </div>
       </div>
       <div className="container mx-auto flex flex-wrap justify-between text-xs">
-        <p>__VERSION__: {__VERSION__}</p>
-        <p>__DATE__: {__DATE__}</p>
-        <p>__ENV__:{__ENV__}</p>
+        <p>app version: {__APP_VERSION__}</p>
+        <p>app env:{__APP_ENV__}</p>
+        <p>build date: {__BUILD_DATE__}</p>
       </div>
     </main>
   )

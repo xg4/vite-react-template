@@ -14,9 +14,9 @@ function getLatestCommitHash() {
 // https://vitejs.dev/config/
 export default defineConfig({
   define: {
-    __VERSION__: JSON.stringify(getLatestCommitHash()),
-    __ENV__: JSON.stringify(process.env.NODE_ENV),
-    __DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
+    __APP_VERSION__: JSON.stringify(getLatestCommitHash()),
+    __APP_ENV__: JSON.stringify(process.env.NODE_ENV),
+    __BUILD_DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
   },
   plugins: [react()],
   resolve: {},
