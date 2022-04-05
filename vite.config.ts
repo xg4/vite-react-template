@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react'
 import { execSync } from 'child_process'
-import dayjs from 'dayjs'
 import { defineConfig } from 'vite'
 
 function getLatestCommitHash() {
@@ -16,7 +15,7 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(getLatestCommitHash()),
     __APP_ENV__: JSON.stringify(process.env.NODE_ENV),
-    __BUILD_DATE__: JSON.stringify(dayjs().format('YYYY-MM-DD HH:mm:ss')),
+    __BUILD_DATE__: JSON.stringify(Date.now()),
   },
   plugins: [react()],
   resolve: {},
