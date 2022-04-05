@@ -6,7 +6,7 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   const alias = {}
-  // can't replace with preact, because it's not compatible with Suspense Components
+  //! can't replace with preact, because it's not compatible with Suspense Components
   // if (!isDev) {
   //   Object.assign(alias, {
   //     react: 'preact/compat',
