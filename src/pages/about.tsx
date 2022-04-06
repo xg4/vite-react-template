@@ -3,6 +3,7 @@ import { CSSTransition } from 'react-transition-group'
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className="flex">
       <div className="mr-5">
@@ -19,17 +20,13 @@ export default function About() {
       <CSSTransition
         unmountOnExit
         in={isOpen}
-        timeout={200}
+        timeout={300}
         classNames={{
-          enter: 'opacity-0',
-          enterActive: 'opacity-70',
-          enterDone: 'opacity-100',
-          exit: 'opacity-70',
-          exitActive: 'opacity-25',
-          exitDone: 'opacity-0',
+          enter: 'animate-fade-in',
+          exit: 'animate-fade-out',
         }}
       >
-        <div className="h-40 w-40 bg-gray-300 shadow-lg transition-opacity duration-200"></div>
+        <div className="h-40 w-40 bg-gray-300 shadow-lg"></div>
       </CSSTransition>
     </div>
   )

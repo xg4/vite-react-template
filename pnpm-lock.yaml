@@ -2633,7 +2633,7 @@ packages:
       confusing-browser-globals: 1.0.11
       eslint: 8.12.0
       eslint-plugin-flowtype: 8.0.3_eslint@8.12.0
-      eslint-plugin-import: 2.25.4_eslint@8.12.0
+      eslint-plugin-import: 2.26.0_eslint@8.12.0
       eslint-plugin-jest: 25.7.0_d66e0302f11fa190bf13280a2167b1c9
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.12.0
       eslint-plugin-react: 7.29.4_eslint@8.12.0
@@ -2675,8 +2675,8 @@ packages:
       string-natural-compare: 3.0.1
     dev: true
 
-  /eslint-plugin-import/2.25.4_eslint@8.12.0:
-    resolution: {integrity: sha512-/KJBASVFxpu0xg1kIBn9AUa8hQVnszpwgE7Ld0lKAlx7Ie87yzEzCgSkekt+le/YVhiaosO4Y14GDAOc41nfxA==}
+  /eslint-plugin-import/2.26.0_eslint@8.12.0:
+    resolution: {integrity: sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
