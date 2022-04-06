@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { RouteObject, useRoutes } from 'react-router-dom'
 
 const BaseLayout = lazy(() => import('./layouts/index'))
-const Home = lazy(() => import('./pages/home'))
+const Home = lazy(() => import('./pages/index'))
 const About = lazy(() => import('./pages/about'))
 const NotFound = lazy(() => import('./pages/notFound'))
 

@@ -20,7 +20,7 @@ export default function About() {
       <CSSTransition
         unmountOnExit
         in={isOpen}
-        timeout={300}
+        timeout={250}
         classNames={{
           enter: 'animate-fade-in',
           exit: 'animate-fade-out',
