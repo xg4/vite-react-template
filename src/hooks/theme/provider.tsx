@@ -1,5 +1,11 @@
 import noop from 'lodash/noop'
-import React, { useCallback, useEffect } from 'react'
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 
 type ThemeValue = 'light' | 'dark'
 
@@ -34,7 +40,7 @@ function setRawTheme(rawTheme: ThemeValue) {
   localStorage.setItem(LOCAL_THEME_KEY, rawTheme)
 }
 
-export const ThemeContext = React.createContext<{
+export const ThemeContext = createContext<{
   theme: ThemeValue
   toggleTheme: () => void
 }>({
@@ -44,14 +50,14 @@ export const ThemeContext = React.createContext<{
 
 export interface ThemeProviderProps {
   initialTheme?: ThemeValue
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export const ThemeProvider = ({
   initialTheme,
   children,
 }: ThemeProviderProps) => {
-  const [theme, setTheme] = React.useState(initialTheme ?? getInitialTheme)
+  const [theme, setTheme] = useState(initialTheme ?? getInitialTheme)
 
   if (initialTheme) {
     setRawTheme(initialTheme)
