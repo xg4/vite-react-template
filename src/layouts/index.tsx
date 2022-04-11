@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useTransition } from 'react'
+import ThemeSwitch from '../components/ThemeSwitch'
 
 function Layout() {
   const routes = [
@@ -22,7 +23,8 @@ function Layout() {
   const navigate = useNavigate()
 
   return (
-    <main className="flex min-h-screen flex-col bg-gray-100 px-4 py-10 font-serif text-gray-900">
+    <main className="flex min-h-screen flex-col bg-gray-100 px-4 py-10 font-serif text-gray-900 transition-colors dark:bg-slate-800 dark:text-gray-200">
+      <ThemeSwitch />
       <div className="flex-1">
         <Outlet />
 
