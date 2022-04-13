@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { useTransition } from 'react'
 import ThemeSwitch from '../components/ThemeSwitch'
 
-function Layout() {
+export default function Layout() {
   const routes = [
     {
       to: '/',
@@ -54,5 +54,3 @@ function Layout() {
     </main>
   )
 }
-
-export default Layout

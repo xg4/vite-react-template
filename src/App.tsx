@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import Routes from './routes'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { ThemeProvider } from './hooks/theme/provider'
+import { ThemeProvider } from './hooks/useTheme/provider'
 
 const queryClient = new QueryClient()
 
