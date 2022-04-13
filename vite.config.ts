@@ -7,11 +7,7 @@ export default defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   const alias = {}
   if (!isDev) {
-    Object.assign(alias, {
-      // react: 'preact/compat',
-      // 'react-dom/test-utils': 'preact/test-utils',
-      // 'react-dom': 'preact/compat',
-    })
+    Object.assign(alias, {})
   }
   return {
     define: {
