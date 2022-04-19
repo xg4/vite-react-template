@@ -3,7 +3,6 @@ export default function Home() {
     'react',
     'react-router v6',
     'react-query',
-    'react-use',
     'react-transition-group',
     'lodash',
     'dayjs',

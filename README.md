@@ -14,7 +14,7 @@
 
 - 🎬 animation: `tailwindcss`、`react-transition-group`
 
-- 🔧 util: `dayjs`、`lodash`、`react-use`
+- 🔧 util: `dayjs`、`lodash`
 
 - 📒 format: `eslint`、`prettier`
 
