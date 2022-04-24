@@ -9,7 +9,9 @@ export default function ThemeSwitch() {
         <label className="block h-6 cursor-pointer overflow-hidden rounded-full bg-gray-300">
           <input
             checked={theme === 'dark'}
-            onChange={toggle}
+            onChange={() => {
+              toggle(theme === 'dark' ? 'light' : 'dark')
+            }}
             type="checkbox"
             className="absolute right-4 block h-6 w-6 cursor-pointer appearance-none rounded-full border-4 bg-white outline-none duration-200 ease-in checked:right-0 checked:bg-slate-500 focus:outline-none"
           />
