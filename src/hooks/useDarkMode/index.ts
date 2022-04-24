@@ -5,26 +5,33 @@ import useMedia from '../useMedia'
 const LOCAL_STORAGE_KEY = '__DARK_MODE_ENABLED__'
 
 function usePrefersDarkMode() {
-  return useMedia(['(prefers-color-scheme: dark)'], [true], false)
+  return useMedia('(prefers-color-scheme: dark)', false)
 }
 
-export default function useDarkMode() {
+interface Options {
+  // Switch dark mode on/off to match system settings
+  automatic?: boolean
+}
+
+export default function useDarkMode({ automatic }: Options = {}) {
   const [enabledState, setEnabledState] =
     useLocalStorage<boolean>(LOCAL_STORAGE_KEY)
 
   const prefersDarkMode = usePrefersDarkMode()
 
-  const enabled =
+  const manualEnabled =
     typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
+
+  const enabled = !automatic ? manualEnabled : prefersDarkMode
 
   useEffect(() => {
     const root = window.document.documentElement
     if (enabled) {
-      root.classList.add('dark')
       root.classList.remove('light')
+      root.classList.add('dark')
     } else {
-      root.classList.add('light')
       root.classList.remove('dark')
+      root.classList.add('light')
     }
   }, [enabled])
   return [enabled, setEnabledState] as const
