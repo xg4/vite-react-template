@@ -15,6 +15,7 @@
   "author": "xg4 <xingor4@gmail.com>",
   "scripts": {
     "build": "tsc && vite build",
+    "build:staging": "tsc && vite build --mode staging",
     "dev": "vite",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",

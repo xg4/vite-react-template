@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
     Object.assign(alias, {})
   }
   return {
+    envPrefix: ['VITE_'],
     define: {
       __APP_VERSION__: JSON.stringify(getAppVersion()),
       __APP_ENV__: JSON.stringify(mode),
