@@ -5,7 +5,7 @@ export default function usePrevious<T>(state: T): T | undefined {
 
   useEffect(() => {
     ref.current = state
-  })
+  }, [state])
 
   return ref.current
 }
