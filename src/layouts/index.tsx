@@ -1,7 +1,8 @@
 import dayjs from 'dayjs'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useTransition } from 'react'
-import ThemeSwitch from '../components/ThemeSwitch'
+import Switch from '../components/Switch'
+import useDarkMode from '../hooks/useDarkMode'
 
 export default function Layout() {
   const routes = [
@@ -22,9 +23,16 @@ export default function Layout() {
 
   const navigate = useNavigate()
 
+  const [darkMode, setDarkMode] = useDarkMode()
+
   return (
     <main className="flex min-h-screen flex-col bg-gray-100 px-4 py-10 font-serif text-gray-900 transition-colors dark:bg-slate-800 dark:text-gray-200">
-      <ThemeSwitch />
+      <div className="flex">
+        <Switch value={darkMode} onChange={setDarkMode} />
+        <span className="font-medium text-gray-700 dark:text-gray-200">
+          {darkMode ? 'dark' : 'light'}
+        </span>
+      </div>
       <div className="flex-1">
         <Outlet />
 
