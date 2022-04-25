@@ -13,7 +13,10 @@ interface Options {
   automatic?: boolean
 }
 
-export default function useDarkMode({ automatic }: Options = {}) {
+export default function useDarkMode({ automatic }: Options = {}): [
+  boolean,
+  React.Dispatch<React.SetStateAction<boolean | undefined>>
+] {
   const [enabledState, setEnabledState] =
     useLocalStorage<boolean>(LOCAL_STORAGE_KEY)
 
@@ -34,5 +37,5 @@ export default function useDarkMode({ automatic }: Options = {}) {
       root.classList.add('light')
     }
   }, [enabled])
-  return [enabled, setEnabledState] as const
+  return [enabled, setEnabledState]
 }
