@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import useLocalStorage from '../useLocalStorage'
-import useMedia from '../useMedia'
+import { useMedia, useLocalStorage } from 'react-use'
 
 const LOCAL_STORAGE_KEY = '__DARK_MODE_ENABLED__'
 
