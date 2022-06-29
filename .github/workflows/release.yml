@@ -19,10 +19,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'pnpm'
 
-      - name: Enable pnpm
-        run: corepack enable
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: false
 
       - name: Install dependencies
         run: pnpm install
