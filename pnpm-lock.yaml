@@ -7,6 +7,7 @@ specifiers:
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
   '@semantic-release/github': 8.0.4
+  '@semantic-release/npm': 9.0.1
   '@semantic-release/release-notes-generator': 10.0.3
   '@tailwindcss/line-clamp': 0.4.0
   '@types/lodash': 4.14.182
@@ -59,6 +60,7 @@ devDependencies:
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
   '@semantic-release/git': 10.0.1_semantic-release@19.0.3
   '@semantic-release/github': 8.0.4_semantic-release@19.0.3
+  '@semantic-release/npm': 9.0.1_semantic-release@19.0.3
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.3
   '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.4
   '@types/lodash': 4.14.182
