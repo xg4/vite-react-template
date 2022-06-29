@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/xg4/vite-react-template/compare/v1.4.0...v1.5.0) (2022-06-29)
+
+
+### Features
+
+* add @semantic-release/npm ([80f74c7](https://github.com/xg4/vite-react-template/commit/80f74c7b9dcd2e080b0ca48768c2a7dc3fc3cf52))
+
 # [1.4.0](https://github.com/xg4/vite-react-template/compare/v1.3.0...v1.4.0) (2022-06-25)
 
 
