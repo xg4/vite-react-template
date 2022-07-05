@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/xg4/vite-react-template/compare/v1.5.0...v1.5.1) (2022-07-05)
+
+
+### Bug Fixes
+
+* replace .env* with .env.example ([326d062](https://github.com/xg4/vite-react-template/commit/326d0624981e69f35c9c1c02d36c21b6c48ec4c4))
+* use pkg version ([f5b4a3d](https://github.com/xg4/vite-react-template/commit/f5b4a3d15f1fd4c34d381c0da5550dfd4d7177c0))
+
 # [1.5.0](https://github.com/xg4/vite-react-template/compare/v1.4.0...v1.5.0) (2022-06-29)
 
 
