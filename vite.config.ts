@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import { getBranchName, getVersion } from './git'
+import { getBranchName, getLastCommit } from './git'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -9,10 +9,13 @@ export default defineConfig(({ mode }) => {
   if (!isDev) {
     Object.assign(alias, {})
   }
+
   return {
     envPrefix: ['VITE_'],
     define: {
-      __APP_VERSION__: JSON.stringify(getVersion()),
+      __APP_VERSION__: JSON.stringify(
+        process.env.npm_package_version + '-' + getLastCommit()
+      ),
       __APP_ENV__: JSON.stringify(mode),
       __APP_BRANCH__: JSON.stringify(getBranchName()),
       __BUILD_DATE__: JSON.stringify(Date.now()),
