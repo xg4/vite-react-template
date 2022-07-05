@@ -16,6 +16,7 @@ specifiers:
   '@types/react-dom': 18.0.5
   '@types/react-transition-group': 4.4.5
   '@vitejs/plugin-react': 1.3.2
+  '@xg4/git': 1.1.0
   autoprefixer: 10.4.7
   axios: 0.27.2
   classnames: 2.3.1
@@ -69,6 +70,7 @@ devDependencies:
   '@types/react-dom': 18.0.5
   '@types/react-transition-group': 4.4.5
   '@vitejs/plugin-react': 1.3.2
+  '@xg4/git': 1.1.0
   autoprefixer: 10.4.7_postcss@8.4.14
   eslint: 8.19.0
   eslint-config-prettier: 8.5.0_eslint@8.19.0
@@ -2209,6 +2211,10 @@ packages:
       resolve: 1.22.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@xg4/git/1.1.0:
+    resolution: {integrity: sha512-O3ROSDTOr9pnfgAIdC3MOMD5P4PpmpFyrH13VK1j/7jfFJnKXT+nlOhtOCLx8RBrtKPdinGTDYLCEoiYTANFoQ==}
     dev: true
 
   /@xobotyi/scrollbar-width/1.9.5:

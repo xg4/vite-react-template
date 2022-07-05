@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react'
+import { getBranchName, getLastCommit } from '@xg4/git'
 import { defineConfig } from 'vite'
-import { getBranchName, getLastCommit } from './git'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
