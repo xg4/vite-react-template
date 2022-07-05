@@ -15,16 +15,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
           version: 7
-          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
